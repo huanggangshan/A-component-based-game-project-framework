@@ -20,16 +20,10 @@ namespace Model
             Assembly assembly = Assembly.Load("XXXXXXXXX");  //项目程序集名称
 
             Type[] assemblyTypes = assembly.GetTypes();
-            foreach (Type type in assemblyTypes)
-            {
-                Console.WriteLine($"{type}");
-            }
-            Console.WriteLine($"==================");
+            
             foreach (Type assemblyType in assemblyTypes)
             {
                 var attrs = assemblyType.GetCustomAttributes(true);
-                
-                Console.WriteLine($"{assemblyType}===");
                 
                 foreach (Attribute attribute in attrs)
                 {
@@ -42,7 +36,6 @@ namespace Model
                     
                     infos.Add(new TypeInfo {Type = assemblyType, Attrs = attrs});
                     
-                    Console.WriteLine(attribute);
                 }
                 
             }
