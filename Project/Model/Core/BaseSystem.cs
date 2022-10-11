@@ -17,7 +17,7 @@ namespace Model
         
         public Basesystem() 
         {
-            Assembly assembly = Assembly.Load("A-component-based-game-project-framework");
+            Assembly assembly = Assembly.Load("XXXXXXXXX");  //项目程序集名称
 
             Type[] assemblyTypes = assembly.GetTypes();
             foreach (Type type in assemblyTypes)
